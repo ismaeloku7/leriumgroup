@@ -1,30 +1,29 @@
 <!DOCTYPE html>
-<html lang="es" class="h-full">
+<html lang="es" class="h-full scroll-smooth">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Lerium Group · Próximamente</title>
-  <meta name="description" content="Lerium Group. Estamos preparando nuestra nueva web corporativa. Muy pronto disponible.">
+  <meta name="description" content="Lerium Group. Tecnología para la gestión profesional de capital, inversores y proyectos inmobiliarios. Nueva web corporativa muy pronto.">
   <meta name="robots" content="noindex, follow">
   <meta property="og:title" content="Lerium Group · Próximamente">
-  <meta property="og:description" content="Estamos preparando nuestra nueva web corporativa.">
+  <meta property="og:description" content="Tecnología para la gestión profesional de capital, inversores y proyectos inmobiliarios.">
   <meta property="og:type" content="website">
-  <link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+  <meta name="theme-color" content="#0b0b0b">
+  <link rel="icon" href="assets/favicon.ico" sizes="any">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
   <script>
     tailwind.config = {
       theme: {
         extend: {
-          fontFamily: { sans: ['Inter', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
+          fontFamily: { sans: ['Montserrat', 'ui-sans-serif', 'system-ui', 'sans-serif'] },
           colors: {
-            brand: {
-              50: '#eef4ff', 100: '#d9e5ff', 200: '#bcd1ff', 300: '#8eb3ff',
-              400: '#598aff', 500: '#3362ff', 600: '#1a41f5', 700: '#132fe1',
-              800: '#1628b6', 900: '#18288f', 950: '#131a56'
-            }
+            ink: { DEFAULT: '#0b0b0b', 900: '#090909', 800: '#111211', 700: '#1c1c1c', 600: '#262626' },
+            mint: { DEFAULT: '#0ceda7', 300: '#9cf8e0', 400: '#65c98d', 600: '#0bc98e', 900: '#17372f' },
+            emerald: { deep: '#056867' }
           },
           animation: { 'fade-up': 'fadeUp .8s ease-out both' },
           keyframes: {
@@ -35,62 +34,96 @@
     }
   </script>
   <style>
-    .bg-grid {
-      background-image:
-        linear-gradient(to right, rgba(255,255,255,.04) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(255,255,255,.04) 1px, transparent 1px);
-      background-size: 48px 48px;
-    }
-    .delay-1 { animation-delay: .15s } .delay-2 { animation-delay: .3s } .delay-3 { animation-delay: .45s }
+    .delay-1 { animation-delay: .15s } .delay-2 { animation-delay: .3s } .delay-3 { animation-delay: .45s } .delay-4 { animation-delay: .6s }
+    .glow { background: radial-gradient(60% 60% at 50% 40%, rgba(12,237,167,.18) 0%, rgba(12,237,167,0) 70%); }
   </style>
 </head>
-<body class="h-full bg-slate-950 text-slate-100 font-sans antialiased">
-  <div class="relative min-h-full flex flex-col overflow-hidden bg-grid">
-    <!-- Glow decorativo -->
-    <div aria-hidden="true" class="pointer-events-none absolute inset-0 flex items-center justify-center">
-      <div class="h-[36rem] w-[36rem] rounded-full bg-brand-600/30 blur-[120px]"></div>
-    </div>
+<body class="h-full bg-ink text-[#fcfcfc] font-sans antialiased">
+  <div class="relative flex min-h-full flex-col overflow-hidden">
+    <div aria-hidden="true" class="glow pointer-events-none absolute inset-0"></div>
 
-    <header class="relative z-10 px-6 py-6 sm:px-10">
-      <a href="/" class="inline-flex items-center gap-3" aria-label="Lerium Group">
-        <img src="assets/logo.svg" alt="" class="h-9 w-9">
-        <span class="text-lg font-semibold tracking-tight">Lerium Group</span>
-      </a>
+    <header class="relative z-10 border-b-2 border-mint bg-ink-900">
+      <div class="mx-auto flex max-w-7xl items-center justify-between px-6 py-6 sm:px-10">
+        <a href="/" class="inline-flex items-center" aria-label="Lerium Group, inicio">
+          <img src="assets/logo.svg" alt="Lerium" class="h-5 w-auto sm:h-6">
+          <span class="ml-2 text-sm font-semibold uppercase tracking-[0.25em] text-mint">Group</span>
+        </a>
+        <a href="#contacto" class="rounded-full border border-white/15 px-5 py-2 text-sm font-medium text-white/80 transition hover:border-mint hover:text-mint">
+          Contacto
+        </a>
+      </div>
     </header>
 
-    <main class="relative z-10 flex flex-1 items-center px-6 sm:px-10">
+    <main class="relative z-10 flex flex-1 items-center px-6 py-16 sm:px-10">
       <div class="mx-auto w-full max-w-3xl text-center">
-        <p class="animate-fade-up inline-flex items-center gap-2 rounded-full border border-brand-400/30 bg-brand-500/10 px-4 py-1.5 text-sm font-medium text-brand-200">
+        <p class="animate-fade-up inline-flex items-center gap-2 rounded-full border border-mint/30 bg-mint/10 px-4 py-1.5 text-sm font-medium text-mint">
           <span class="relative flex h-2 w-2">
-            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-brand-400 opacity-75"></span>
-            <span class="relative inline-flex h-2 w-2 rounded-full bg-brand-400"></span>
+            <span class="absolute inline-flex h-full w-full animate-ping rounded-full bg-mint opacity-75"></span>
+            <span class="relative inline-flex h-2 w-2 rounded-full bg-mint"></span>
           </span>
           Web en construcción
         </p>
 
-        <h1 class="animate-fade-up delay-1 mt-8 text-4xl font-bold tracking-tight sm:text-6xl">
+        <h1 class="animate-fade-up delay-1 mt-8 text-4xl font-bold leading-tight tracking-tight sm:text-6xl">
           Estamos preparando algo
-          <span class="bg-gradient-to-r from-brand-300 to-brand-500 bg-clip-text text-transparent">nuevo</span>
+          <span class="text-mint">nuevo</span>
         </h1>
 
-        <p class="animate-fade-up delay-2 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-slate-400">
-          Nuestra nueva web corporativa estará disponible muy pronto. Mientras tanto, puedes ponerte en contacto con nosotros.
+        <p class="animate-fade-up delay-2 mx-auto mt-6 max-w-xl text-lg leading-relaxed text-white/70">
+          Tecnología para la gestión profesional de capital, inversores y proyectos inmobiliarios. Nuestra nueva web corporativa estará disponible muy pronto.
         </p>
 
         <div class="animate-fade-up delay-3 mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
-          <a href="mailto:info@leriumgroup.com"
-             class="inline-flex items-center gap-2 rounded-lg bg-brand-600 px-6 py-3 text-sm font-semibold text-white shadow-lg shadow-brand-600/30 transition hover:bg-brand-500 focus:outline-none focus-visible:ring-2 focus-visible:ring-brand-300">
-            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true">
-              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 01-2.25 2.25h-15a2.25 2.25 0 01-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0019.5 4.5h-15a2.25 2.25 0 00-2.25 2.25m19.5 0v.243a2.25 2.25 0 01-1.07 1.916l-7.5 4.615a2.25 2.25 0 01-2.36 0L3.32 8.91a2.25 2.25 0 01-1.07-1.916V6.75" />
-            </svg>
-            Contactar
+          <a href="mailto:info@lerium.es"
+             class="inline-flex items-center gap-2 rounded-full bg-mint px-7 py-3 text-sm font-semibold text-ink-800 transition hover:bg-mint-600 focus:outline-none focus-visible:ring-2 focus-visible:ring-mint-300 focus-visible:ring-offset-2 focus-visible:ring-offset-ink">
+            Escríbenos
+          </a>
+          <a href="https://lerium.es" target="_blank" rel="noopener"
+             class="inline-flex items-center gap-2 rounded-full border border-white/15 px-7 py-3 text-sm font-semibold text-white/80 transition hover:border-mint hover:text-mint">
+            Ir a la plataforma
+            <svg class="h-4 w-4" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" aria-hidden="true"><path stroke-linecap="round" stroke-linejoin="round" d="M13.5 6H5.25A2.25 2.25 0 003 8.25v10.5A2.25 2.25 0 005.25 21h10.5A2.25 2.25 0 0018 18.75V10.5m-10.5 6L21 3m0 0h-5.25M21 3v5.25"/></svg>
           </a>
         </div>
       </div>
     </main>
 
-    <footer class="relative z-10 px-6 py-6 text-center text-sm text-slate-500 sm:px-10">
-      © <span id="year"></span> Lerium Group. Todos los derechos reservados.
+    <section id="contacto" class="relative z-10 border-t border-white/10 bg-ink-800/60 px-6 py-12 sm:px-10">
+      <div class="mx-auto grid max-w-5xl gap-8 sm:grid-cols-3">
+        <div class="animate-fade-up delay-4">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-mint">Email</h2>
+          <a href="mailto:info@lerium.es" class="mt-3 block text-base font-medium text-white transition hover:text-mint">info@lerium.es</a>
+        </div>
+        <div class="animate-fade-up delay-4">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-mint">Dirección</h2>
+          <address class="mt-3 not-italic text-base leading-relaxed text-white/80">
+            Pasaje de Ruzafa, 2<br>
+            Valencia, España
+          </address>
+        </div>
+        <div class="animate-fade-up delay-4">
+          <h2 class="text-xs font-semibold uppercase tracking-[0.2em] text-mint">Síguenos</h2>
+          <div class="mt-3 flex items-center gap-3">
+            <a href="https://www.instagram.com/lerium.platform" target="_blank" rel="noopener noreferrer" aria-label="Instagram (abre en nueva ventana)"
+               class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-mint hover:text-mint">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 1.2.1 1.8.2 2.2.4.6.2 1 .5 1.4.9.4.4.7.8.9 1.4.2.4.4 1 .4 2.2.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 1.2-.2 1.8-.4 2.2-.2.6-.5 1-.9 1.4-.4.4-.8.7-1.4.9-.4.2-1 .4-2.2.4-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-1.2-.1-1.8-.2-2.2-.4-.6-.2-1-.5-1.4-.9-.4-.4-.7-.8-.9-1.4-.2-.4-.4-1-.4-2.2C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8c.1-1.2.2-1.8.4-2.2.2-.6.5-1 .9-1.4.4-.4.8-.7 1.4-.9.4-.2 1-.4 2.2-.4C8.4 2.2 8.8 2.2 12 2.2M12 0C8.7 0 8.3 0 7.1.1 5.8.1 4.9.3 4.1.6c-.8.3-1.5.7-2.1 1.4C1.3 2.6.9 3.3.6 4.1.3 4.9.1 5.8.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.1 1.3.3 2.2.6 2.9.3.8.7 1.5 1.4 2.1.6.7 1.3 1.1 2.1 1.4.8.3 1.6.5 2.9.6C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c1.3-.1 2.2-.3 2.9-.6.8-.3 1.5-.7 2.1-1.4.7-.6 1.1-1.3 1.4-2.1.3-.8.5-1.6.6-2.9.1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.1-1.3-.3-2.2-.6-2.9-.3-.8-.7-1.5-1.4-2.1C21.4 1.3 20.7.9 19.9.6 19.1.3 18.2.1 16.9.1 15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 100 12.4 6.2 6.2 0 000-12.4zM12 16a4 4 0 110-8 4 4 0 010 8zm6.4-11.8a1.4 1.4 0 100 2.9 1.4 1.4 0 000-2.9z"/></svg>
+            </a>
+            <a href="https://www.tiktok.com/@lerium.platform" target="_blank" rel="noopener noreferrer" aria-label="TikTok (abre en nueva ventana)"
+               class="flex h-10 w-10 items-center justify-center rounded-full border border-white/15 text-white/80 transition hover:border-mint hover:text-mint">
+              <svg class="h-5 w-5" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M19.6 6.7a4.9 4.9 0 01-3.8-4.4V2h-3.4v13.5a2.9 2.9 0 11-2-2.7V9.3a6.3 6.3 0 105.4 6.2V8.4a8.2 8.2 0 004.8 1.5V6.6a4.9 4.9 0 01-1 .1z"/></svg>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer class="relative z-10 bg-[#100f0d] px-6 py-6 sm:px-10">
+      <div class="mx-auto flex max-w-5xl flex-col items-center justify-between gap-3 text-center text-xs text-white/50 sm:flex-row sm:text-left">
+        <p>© <span id="year"></span> Lerium Soluciones Tecnológicas, S.L. · CIF B56397706. Todos los derechos reservados.</p>
+        <nav aria-label="Legal" class="flex gap-4">
+          <a href="https://lerium.es/aviso-legal" target="_blank" rel="noopener" class="transition hover:text-mint">Aviso legal</a>
+          <a href="https://lerium.es/politica-de-privacidad" target="_blank" rel="noopener" class="transition hover:text-mint">Privacidad</a>
+        </nav>
+      </div>
     </footer>
   </div>
 
